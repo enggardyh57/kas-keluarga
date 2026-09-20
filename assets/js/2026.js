@@ -3,127 +3,116 @@
 	[1], {
 		939(e, t, a) {
 			const n = [{
-				label: "Workspace",
+				label: "Menu",
 				items: [{
-					key: "dashboard",
-					text: "Dashboard",
-					href: "index.html",
-					icon: '<path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/>'
-				}, {
-					key: "pro",
-					text: "Go Pro",
-					href: "#",
-					badge: {
-						kind: "pro",
-						text: "PRO"
+						key: "dashboard",
+						text: "Dashboard",
+						href: "index.html",
+						icon: '<path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/>'
 					},
-					icon: '<path d="M12 2 15 8l6.5 1-4.8 4.6L18 20l-6-3-6 3 1.3-6.4L2.5 9 9 8z"/>'
-				}]
-			}, {
-				label: "Communications",
-				items: [{
-					key: "email",
-					text: "Email",
-					href: "email.html",
-					icon: '<rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/>'
-				}, {
-					key: "compose",
-					text: "Compose",
-					href: "compose.html",
-					icon: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 1 1 3 3L7 19l-4 1 1-4z"/>'
-				}, {
-					key: "calendar",
-					text: "Calendar",
-					href: "calendar.html",
-					icon: '<rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/>'
-				}, {
-					key: "chat",
-					text: "Chat",
-					href: "chat.html",
-					icon: '<path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>'
-				}]
-			}, {
-				label: "Components",
-				items: [{
-					key: "charts",
-					text: "Charts",
-					href: "charts.html",
-					badge: {
-						kind: "new",
-						text: "NEW"
+					{
+						key: "penarikan",
+						text: "Penarikan ATM",
+						href: "#",
+						icon: '<path d="M3 10h18"/><path d="M5 10V6h14v4"/><path d="M5 10v8h14v-8"/><path d="M8 14h8"/>'
 					},
-					icon: '<path d="M3 20V4M7 20v-6M11 20v-10M15 20v-4M19 20V8"/>'
-				}, {
-					key: "forms",
-					text: "Forms",
-					href: "forms.html",
-					icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M7 10h10M7 14h7"/>'
-				}, {
-					key: "ui",
-					text: "UI Elements",
-					href: "ui.html",
-					icon: '<circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/>'
-				}, {
-					key: "buttons",
-					text: "Buttons",
-					href: "buttons.html",
-					icon: '<rect x="3" y="8" width="18" height="8" rx="4"/>'
-				}, {
-					key: "tables",
-					text: "Tables",
-					icon: '<rect x="3" y="4" width="18" height="16" rx="2"/><path d="M3 10h18M3 16h18M9 4v16"/>',
-					children: [{
-						key: "basic-table",
-						text: "Basic Table",
-						href: "basic-table.html"
-					}, {
-						key: "datatable",
-						text: "Data Table",
-						href: "datatable.html"
-					}]
-				}, {
-					key: "maps",
-					text: "Maps",
-					icon: '<path d="M9 20V4l6 4v16z"/><path d="M3 7l6-3v16l-6 3z"/><path d="M15 8l6-3v16l-6 3"/>',
-					children: [{
-						key: "google-maps",
-						text: "Google Map",
-						href: "google-maps.html"
-					}, {
-						key: "vector-maps",
-						text: "Vector Map",
-						href: "vector-maps.html"
-					}]
-				}, {
-					key: "pages",
-					text: "Pages",
-					icon: '<path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/>',
-					children: [{
-						key: "blank",
-						text: "Blank",
-						href: "blank.html"
-					}, {
-						key: "404",
-						text: "404",
-						href: "404.html"
-					}, {
-						key: "500",
-						text: "500",
-						href: "500.html"
-					}, {
-						key: "signin",
-						text: "Sign In",
-						href: "signin.html"
-					}, {
-						key: "signup",
-						text: "Sign Up",
-						href: "signup.html"
-					}]
-				}]
+					{
+						key: "pengeluaran",
+						text: "Pengeluaran",
+						href: "#",
+						icon: '<path d="M4 6h16v12H4z"/><path d="M8 10h.01M16 14h.01"/><circle cx="12" cy="12" r="2"/>'
+					},
+					{
+						key: "anggaran",
+						text: "Anggaran",
+						href: "#",
+						icon: '<path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 3-4 3 2 5-6"/>'
+					},
+					{
+						key: "riwayat",
+						text: "Riwayat",
+						href: "#",
+						icon: '<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v6h6"/><path d="M12 7v5l3 2"/>'
+					},
+					{
+						key: "laporan",
+						text: "Laporan",
+						href: "#",
+						icon: '<path d="M5 20V10"/><path d="M12 20V4"/><path d="M19 20v-7"/>'
+					},
+					{
+						key: "pengaturan",
+						text: "Pengaturan",
+						href: "#",
+						icon: '<path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="m19.4 15 .1.1a2 2 0 1 1-2.8 2.8l-.1-.1a2 2 0 0 0-3.4 1.4V19a2 2 0 1 1-4 0v-.2a2 2 0 0 0-3.4-1.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A2 2 0 0 0 4.5 11H4a2 2 0 1 1 0-4h.2a2 2 0 0 0 1.4-3.4l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A2 2 0 0 0 11 2.5V2a2 2 0 1 1 4 0v.2a2 2 0 0 0 3.4 1.4l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A2 2 0 0 0 19.5 10h.2a2 2 0 1 1 0 4h-.2a2 2 0 0 0-1.4 1Z"/>'
+					}
+				]
 			}];
 
 			function o(e) {
-				return `\n    <header class="d-topbar">\n      <div class="crumbs">\n        <button class="hamburger" data-drawer-open aria-label="Open navigation">\n          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>\n        </button>\n        ${function(e){if(!e)return"";const t=e.split("|").map(e=>e.trim()).filter(Boolean);return t.map((e,a)=>`${a>0?'<svg class="sep" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>':""}<span${a===t.length-1?' class="current"':""}>${e}</span>`).join("")}(e)}\n      </div>\n      <div class="topbar-actions">\n        <button class="cmd" data-palette-open>\n          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>\n          <span>Search...</span>\n          <kbd class="kbd">⌘K</kbd>\n        </button>\n\n        <div class="dd-wrap">\n          <button class="icon-btn" data-dropdown aria-label="Notifications">\n            <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>\n            <span class="count danger">3</span>\n          </button>\n          <div class="dd-menu" role="menu">\n            <div class="dd-head">\n              <svg viewBox="0 0 24 24"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>\n              Notifications\n            </div>\n            <div class="dd-list">\n              <a class="dd-item" href="#">\n                <div class="dd-avatar a1">JD</div>\n                <div class="dd-body">\n                  <div class="dd-text"><strong>John Doe</strong> liked your <em>post</em></div>\n                  <div class="dd-time">5 MIN AGO</div>\n                </div>\n              </a>\n              <a class="dd-item" href="#">\n                <div class="dd-avatar a2">MD</div>\n                <div class="dd-body">\n                  <div class="dd-text"><strong>Moo Doe</strong> liked your <em>cover image</em></div>\n                  <div class="dd-time">7 MIN AGO</div>\n                </div>\n              </a>\n              <a class="dd-item" href="#">\n                <div class="dd-avatar a3">LD</div>\n                <div class="dd-body">\n                  <div class="dd-text"><strong>Lee Doe</strong> commented on your <em>video</em></div>\n                  <div class="dd-time">10 MIN AGO</div>\n                </div>\n              </a>\n            </div>\n            <a class="dd-footer" href="#">View all notifications →</a>\n          </div>\n        </div>\n\n        <div class="dd-wrap">\n          <button class="icon-btn" data-dropdown aria-label="Messages">\n            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>\n            <span class="count info">3</span>\n          </button>\n          <div class="dd-menu" role="menu">\n            <div class="dd-head">\n              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>\n              Messages\n            </div>\n            <div class="dd-list">\n              <a class="dd-item" href="#">\n                <div class="dd-avatar a1">JD</div>\n                <div class="dd-body">\n                  <div class="dd-row-head"><strong>John Doe</strong><span class="dd-time">5 MIN</span></div>\n                  <div class="dd-preview">Want to create your own customized data generator for your app…</div>\n                </div>\n              </a>\n              <a class="dd-item" href="#">\n                <div class="dd-avatar a2">MD</div>\n                <div class="dd-body">\n                  <div class="dd-row-head"><strong>Moo Doe</strong><span class="dd-time">15 MIN</span></div>\n                  <div class="dd-preview">Want to create your own customized data generator for your app…</div>\n                </div>\n              </a>\n              <a class="dd-item" href="#">\n                <div class="dd-avatar a3">LD</div>\n                <div class="dd-body">\n                  <div class="dd-row-head"><strong>Lee Doe</strong><span class="dd-time">25 MIN</span></div>\n                  <div class="dd-preview">Want to create your own customized data generator for your app…</div>\n                </div>\n              </a>\n            </div>\n            <a class="dd-footer" href="#">View all messages →</a>\n          </div>\n        </div>\n\n        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme"></button>\n\n        <div class="dd-wrap">\n          <div class="avatar" data-dropdown tabindex="0" role="button" aria-label="Account menu">JD</div>\n          <div class="dd-menu dd-profile" role="menu">\n            <div class="dd-profile-head">\n              <div class="dd-profile-name">John Doe</div>\n              <div class="dd-profile-email">john@adminator.app</div>\n            </div>\n            <a class="dd-menu-item" href="#">\n              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>\n              Settings\n            </a>\n            <a class="dd-menu-item" href="#">\n              <svg viewBox="0 0 24 24"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>\n              Profile\n            </a>\n            <a class="dd-menu-item" href="email.html">\n              <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>\n              Messages\n            </a>\n            <div class="dd-divider"></div>\n            <a class="dd-menu-item danger" href="#">\n              <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>\n              Logout\n            </a>\n          </div>\n        </div>\n      </div>\n    </header>`
+				return `
+				<header class="d-topbar">
+
+					<div class="crumbs">
+
+						<button class="hamburger" data-drawer-open aria-label="Open navigation">
+							<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+								<line x1="3" y1="6" x2="21" y2="6"/>
+								<line x1="3" y1="12" x2="21" y2="12"/>
+								<line x1="3" y1="18" x2="21" y2="18"/>
+							</svg>
+						</button>
+
+						${
+							function (e) {
+								if (!e) return "";
+
+								const t = e
+									.split("|")
+									.map(e => e.trim())
+									.filter(Boolean);
+
+								return t.map((e, a) => `
+									${
+										a > 0
+											? '<svg class="sep" width="10" height="10" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m9 18 6-6-6-6"/></svg>'
+											: ""
+									}
+
+									<span${a === t.length - 1 ? ' class="current"' : ""}>
+										${e}
+									</span>
+								`).join("");
+							}(e)
+						}
+
+					</div>
+
+
+					<div class="topbar-actions">
+
+						
+
+						<!-- Theme -->
+						<button
+							class="icon-btn"
+							id="themeToggle"
+							aria-label="Toggle theme">
+						</button>
+
+
+						<a class="dd-menu-item danger" href="#">
+							<svg viewBox="0 0 24 24">
+								<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
+								<path d="m16 17 5-5-5-5"/>
+								<path d="M21 12H9"/>
+							</svg>
+							Logout
+						</a>
+
+					</div>
+
+				</header>`;
 			}
 
 			function s() {
@@ -133,21 +122,220 @@
 					s = document.querySelector("[data-shell-sidebar]"),
 					r = document.querySelector("[data-shell-topbar]"),
 					i = document.querySelector("[data-shell-footer]");
-				s && (s.outerHTML = function (e) {
-					const t = n.map(t => function (e, t) {
-						const a = e.items.map(e => e.children ? function (e, t) {
-							const a = e.children.some(e => e.key === t) ? " is-open" : "",
-								n = e.children.map(e => `<a href="${e.href}">${e.text}</a>`).join("");
-							return `\n    <div class="nav-item-group${a}" data-nav-group>\n      <a class="nav-link" href="javascript:void(0)" data-nav-toggle>\n        <svg viewBox="0 0 24 24">${e.icon}</svg>\n        <span>${e.text}</span>\n        <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="m9 18 6-6-6-6"/></svg>\n      </a>\n      <div class="nav-submenu">${n}</div>\n    </div>`
-						}(e, t) : function (e, t) {
-							const a = e.key === t ? " is-active" : "",
-								n = e.badge ? `<span class="nav-badge ${e.badge.kind}">${e.badge.text}</span>` : "";
-							return `\n    <a class="nav-link${a}" href="${e.href}">\n      <svg viewBox="0 0 24 24">${e.icon}</svg>\n      <span>${e.text}</span>\n      ${n}\n    </a>`
-						}(e, t)).join("");
-						return `\n    <nav class="nav-section">\n      <div class="nav-label">${e.label}</div>\n      ${a}\n    </nav>`
-					}(t, e)).join("");
-					return `\n    <aside class="d-sidebar">\n      <div class="brand">\n        <div class="brand-logo"><svg viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">\n  <path fill="#ffffff" d="M14.747 9.125c.527-1.426 1.736-2.573 3.317-2.573c1.643 0 2.792 1.085 3.318 2.573l6.077 16.867c.186.496.248.931.248 1.147c0 1.209-.992 2.046-2.139 2.046c-1.303 0-1.954-.682-2.264-1.611l-.931-2.915h-8.62l-.93 2.884c-.31.961-.961 1.642-2.232 1.642c-1.24 0-2.294-.93-2.294-2.17c0-.496.155-.868.217-1.023l6.233-16.867zm.34 11.256h5.891l-2.883-8.992h-.062l-2.946 8.992z"/>\n</svg></div>\n        <div class="brand-text">\n          <div class="brand-name">Adminator</div>\n          <div class="brand-tag">v4.1.2 · preview</div>\n        </div>\n      </div>\n      ${t}\n      <div class="sidebar-footer">\n        <div class="workspace">\n          <div class="workspace-avatar">JD</div>\n          <div class="workspace-text">\n            <div class="workspace-name">John Doe</div>\n            <div class="workspace-role">admin</div>\n          </div>\n          <svg class="workspace-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">\n            <path d="m7 9 5-5 5 5"/><path d="m7 15 5 5 5-5"/>\n          </svg>\n        </div>\n      </div>\n    </aside>`
-				}(t)), r && (r.outerHTML = o(a)), i && (i.outerHTML = '\n    <footer class="d-footer">\n      <div>© 2026 · Designed by <a href="https://colorlib.com" target="_blank" rel="nofollow noopener noreferrer">Colorlib</a></div>\n      <div class="d-footer-meta">\n        <span>v4.1.2</span>\n        <span>preview build</span>\n      </div>\n    </footer>')
+
+				// =========================
+				// SIDEBAR
+				// =========================
+				s && (
+					s.outerHTML = function (e) {
+
+						const t = n.map(t =>
+							function (e, t) {
+
+								const a = e.items.map(e => {
+
+									// Menu dengan submenu
+									if (e.children) {
+										const a = e.children.some(e => e.key === t) ?
+											" is-open" :
+											"";
+
+										const n = e.children
+											.map(e => `<a href="${e.href}">${e.text}</a>`)
+											.join("");
+
+										return `
+								<div class="nav-item-group${a}" data-nav-group>
+
+									<a
+										class="nav-link"
+										href="javascript:void(0)"
+										data-nav-toggle
+									>
+										<svg viewBox="0 0 24 24">
+											${e.icon}
+										</svg>
+
+										<span>${e.text}</span>
+
+										<svg
+											class="chev"
+											viewBox="0 0 24 24"
+											fill="none"
+											stroke="currentColor"
+											stroke-width="1.8"
+										>
+											<path d="m9 18 6-6-6-6"/>
+										</svg>
+									</a>
+
+									<div class="nav-submenu">
+										${n}
+									</div>
+
+								</div>
+							`;
+									}
+
+									// Menu biasa
+									const a = e.key === t ?
+										" is-active" :
+										"";
+
+									const n = e.badge ?
+										`<span class="nav-badge ${e.badge.kind}">
+									${e.badge.text}
+							  </span>` :
+										"";
+
+									return `
+							<a
+								class="nav-link${a}"
+								href="${e.href}"
+							>
+								<svg viewBox="0 0 24 24">
+									${e.icon}
+								</svg>
+
+								<span>${e.text}</span>
+
+								${n}
+							</a>
+						`;
+								}).join("");
+
+								return `
+						<nav class="nav-section">
+
+							<div class="nav-label">
+								${e.label}
+							</div>
+
+							${a}
+
+						</nav>
+					`;
+
+							}(t, e)
+						).join("");
+
+						// =========================
+						// SIDEBAR HTML
+						// =========================
+						return `
+				<aside class="d-sidebar">
+
+					<div class="brand">
+
+						<div class="brand-logo">
+							<svg width="22" height="22" viewBox="0 0 24 24"
+								fill="none"
+								stroke="#fff"
+								stroke-width="2"
+								stroke-linecap="round"
+								stroke-linejoin="round">
+								<path d="M20 7V6a2 2 0 0 0-2-2H5a3 3 0 0 0 0 6h15v8a2 2 0 0 1-2 2H5a3 3 0 0 1-3-3V7"/>
+								<path d="M16 13h.01"/>
+							</svg>
+						</div>
+
+						<div class="brand-text">
+							<div class="brand-name">
+								Kas Keluarga
+							</div>
+
+							<div class="brand-tag">
+								Ceria
+							</div>
+						</div>
+
+					</div>
+
+					${t}
+
+					<div class="sidebar-footer">
+
+						<div class="workspace">
+
+							<div class="workspace-avatar">
+								JD
+							</div>
+
+							<div class="workspace-text">
+
+								<div class="workspace-name">
+									John Doe
+								</div>
+
+								<div class="workspace-role">
+									admin
+								</div>
+
+							</div>
+
+							<svg
+								class="workspace-chev"
+								width="14"
+								height="14"
+								viewBox="0 0 24 24"
+								fill="none"
+								stroke="currentColor"
+								stroke-width="1.8"
+							>
+								<path d="m7 9 5-5 5 5"/>
+								<path d="m7 15 5 5 5-5"/>
+							</svg>
+
+						</div>
+
+					</div>
+
+				</aside>
+			`;
+
+					}(t)
+				);
+
+				// =========================
+				// TOPBAR
+				// =========================
+				r && (
+					r.outerHTML = o(a)
+				);
+
+				// =========================
+				// FOOTER
+				// =========================
+				i && (
+					i.outerHTML = `
+			<footer class="d-footer">
+
+				<div>
+					© 2026 · Designed by
+					<a
+						href="https://colorlib.com"
+						target="_blank"
+						rel="nofollow noopener noreferrer"
+					>
+						Colorlib
+					</a>
+				</div>
+
+				<div class="d-footer-meta">
+
+					<span>
+						v4.1.2
+					</span>
+
+					<span>
+						preview build
+					</span>
+
+				</div>
+
+			</footer>
+		`
+				);
 			}
 
 			function r() {
