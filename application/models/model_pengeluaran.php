@@ -1,44 +1,46 @@
 <?php
-class model_penarikan extends CI_Model
+class model_pengeluaran extends CI_Model
 {
-    public function getAllPenarikan()
+    public function getAllpengeluaran()
     {
         return $this->db
             ->order_by('tanggal', 'DESC')
             ->order_by('id', 'DESC')
-            ->get('penarikan_atm')
+            ->get('pengeluaran')
             ->result_array();
     }
-    public function tambah_penarikan()
+    public function tambah_pengeluaran()
     {
         $data = [
             'tanggal' => $this->input->post('tanggal'),
             'nominal' => $this->input->post('nominal'),
+            'kategori' => $this->input->post('kategori'),
             'keterangan' => $this->input->post('keterangan')
         ];
 
-        $this->db->insert('penarikan_atm', $data);
+        $this->db->insert('pengeluaran', $data);
     }
 
-    public function hapus_penarikan($id)
+    public function hapus_pengeluaran($id)
     {
-        $this->db->delete('penarikan_atm', ['id' => $id]);
+        $this->db->delete('pengeluaran', ['id' => $id]);
     }
 
-    public function getPenarikanById($id)
+    public function getpengeluaranById($id)
     {
-        return $this->db->get_where('penarikan_atm', ['id' => $id])->row_array();
+        return $this->db->get_where('pengeluaran', ['id' => $id])->row_array();
     }
 
-    public function update_penarikan($id)
+    public function update_pengeluaran($id)
     {
         $data = [
             'tanggal' => $this->input->post('tanggal'),
             'nominal' => $this->input->post('nominal'),
+            'kategori' => $this->input->post('kategori'),
             'keterangan' => $this->input->post('keterangan')
         ];
 
         $this->db->where('id', $id);
-        $this->db->update('penarikan_atm', $data);
+        $this->db->update('pengeluaran', $data);
     }
 }

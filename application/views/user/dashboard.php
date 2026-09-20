@@ -1,4 +1,4 @@
-<body data-active="dashboard" data-crumbs="Workspace | Dashboard">
+<body data-active="dashboard" data-crumbs="Menu | Dashboard">
     <div class="shell">
         <div data-shell-sidebar></div>
         <div class="main">

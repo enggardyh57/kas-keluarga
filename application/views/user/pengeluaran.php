@@ -1,4 +1,4 @@
-<body data-active="penarikan" data-crumbs="Menu | Penarikan">
+<body data-active="pengeluaran" data-crumbs="Menu | Pengeluaran">
     <div class="shell">
         <div data-shell-sidebar></div>
         <div class="main">
@@ -13,15 +13,15 @@
             <?php endif; ?>
             <main class="content">
 
-                <!-- TAMBAH PENARIKAN-->
+                <!-- TAMBAH PENGELUARAN-->
                 <div class="row">
                     <div class="page-header">
-                        <h1 class="hero-title">Penarikan ATM</h1>
-                        <p>Saldo ATM berkurang, uang tunai bertambah otomatis.</p>
+                        <h1 class="hero-title">Pengeluaran</h1>
+                        <p>Uang tunai berkurang otomatis saat pengeluaran dicatat.</p>
                     </div>
                     <form action="<?= isset($edit)
-                                        ? base_url('penarikan/update/' . $edit['id'])
-                                        : base_url('penarikan/tambah')
+                                        ? base_url('pengeluaran/update/' . $edit['id'])
+                                        : base_url('pengeluaran/tambah')
                                     ?>" method="post">
                         <div class="row">
                             <div class="card">
@@ -41,6 +41,18 @@
                                         </div>
                                         <div class="col-md-6">
                                             <div class="mb-3">
+                                                <label for="kategori" class="form-label fw-bold">Kategori</label>
+                                                <select class="form-select" id="kategori" name="kategori">
+                                                    <option value="Belanja Rumah">Belanja Rumah</option>
+                                                    <option value="Saku Bintang">Saku Bintang</option>
+                                                    <option value="Saku Keysia">Saku Keysia</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
                                                 <label for="nominal" class="form-label fw-bold">Nominal</label>
                                                 <input
                                                     placeholder="10000"
@@ -52,17 +64,20 @@
                                                 <?php echo form_error('nominal', '<span style="color: red;">', '</span>'); ?>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="keterangan" class="form-label fw-bold">Keterangan</label>
-                                        <textarea
-                                            placeholder="Tarik tunai untuk belanja"
-                                            class="form-control"
-                                            id="keterangan"
-                                            name="keterangan"
-                                            rows="2"><?= isset($edit) ? $edit['keterangan'] : set_value('keterangan') ?></textarea>
+                                        <div class="col-md-6">
+                                            <div class="mb-3">
+                                                <label for="keterangan" class="form-label fw-bold">Keterangan</label>
+                                                <input
+                                                    type="text"
+                                                    placeholder="Sayur dan lauk"
+                                                    class="form-control"
+                                                    id="keterangan"
+                                                    name="keterangan"
+                                                    value="<?= isset($edit) ? $edit['keterangan'] : set_value('keterangan') ?>">
+                                                <?php echo form_error('keterangan', '<span style="color: red;">', '</span>'); ?>
+                                            </div>
+                                        </div>
 
-                                        <?php echo form_error('keterangan', '<span style="color: red;">', '</span>'); ?>
                                     </div>
 
                                     <button type="submit" class="btn btn-primary">
@@ -71,7 +86,7 @@
                                     </button>
 
                                     <?php if (isset($edit)): ?>
-                                        <a href="<?= base_url('penarikan') ?>" class="btn btn-secondary">
+                                        <a href="<?= base_url('pengeluaran') ?>" class="btn btn-secondary">
                                             Batal
                                         </a>
                                     <?php endif; ?>
@@ -81,16 +96,17 @@
                     </form>
                 </div>
 
-                <!-- RIWAYAT PENARIKAN -->
+                <!-- RIWAYAT pengeluaran -->
                 <div class="row mt-3">
                     <div class="card">
                         <div class="card-body">
-                            
+
                             <table class="table">
                                 <thead>
                                     <tr>
                                         <th>No</th>
                                         <th>Tanggal</th>
+                                        <th>Kategori</th>
                                         <th>Nominal</th>
                                         <th>Keterangan</th>
                                         <th>Aksi</th>
@@ -98,19 +114,24 @@
                                 </thead>
                                 <tbody>
                                     <?php $angka = 1; ?>
-                                    <?php foreach ($penarikan as $p): ?>
+                                    <?php foreach ($pengeluaran as $p): ?>
                                         <tr>
                                             <td><?= $angka++ ?></td>
                                             <td><?= $p['tanggal'] ?></td>
+                                            <td>
+                                                <span class="kategori-badge">
+                                                    <?= $p['kategori'] ?>
+                                                </span>
+                                            </td>
                                             <td>Rp <?= number_format($p['nominal'], 0, ',', '.') ?></td>
                                             <td><?= $p['keterangan'] ?></td>
                                             <td>
-                                                <a href="<?= base_url('penarikan/edit/' . $p['id']) ?>">
+                                                <a href="<?= base_url('pengeluaran/edit/' . $p['id']) ?>">
                                                     <i class="fa-solid fa-pencil" style="font-size: 18px;"></i>
                                                 </a>
                                                 <a href="#"
                                                     class="btn-hapus"
-                                                    data-url="<?= base_url('penarikan/hapus/' . $p['id']) ?>">
+                                                    data-url="<?= base_url('pengeluaran/hapus/' . $p['id']) ?>">
                                                     <i class="fa-regular fa-trash-can" style="font-size: 15px; color: red;"></i>
                                                 </a>
                                             </td>
@@ -132,8 +153,8 @@
                         <i class="fa-solid fa-triangle-exclamation"></i>
                     </div>
 
-                    <h3>Hapus Penarikan?</h3>
-                    <p>Data penarikan ini akan dihapus secara permanen.</p>
+                    <h3>Hapus pengeluaran?</h3>
+                    <p>Data pengeluaran ini akan dihapus secara permanen.</p>
 
                     <div class="modal-hapus-action">
                         <button type="button" id="batalHapus" class="btn-batal">
