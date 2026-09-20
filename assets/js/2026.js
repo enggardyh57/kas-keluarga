@@ -7,43 +7,43 @@
 				items: [{
 						key: "dashboard",
 						text: "Dashboard",
-						href: "index.html",
+						href: "dashboard",
 						icon: '<path d="M3 12 12 3l9 9"/><path d="M5 10v10h14V10"/>'
 					},
 					{
 						key: "penarikan",
 						text: "Penarikan ATM",
-						href: "#",
+						href: "penarikan",
 						icon: '<path d="M3 10h18"/><path d="M5 10V6h14v4"/><path d="M5 10v8h14v-8"/><path d="M8 14h8"/>'
 					},
 					{
 						key: "pengeluaran",
 						text: "Pengeluaran",
-						href: "#",
+						href: "pengeluaran",
 						icon: '<path d="M4 6h16v12H4z"/><path d="M8 10h.01M16 14h.01"/><circle cx="12" cy="12" r="2"/>'
 					},
 					{
 						key: "anggaran",
 						text: "Anggaran",
-						href: "#",
+						href: "anggaran",
 						icon: '<path d="M4 19V5"/><path d="M4 19h16"/><path d="m7 15 3-4 3 2 5-6"/>'
 					},
 					{
 						key: "riwayat",
 						text: "Riwayat",
-						href: "#",
+						href: "riwayat",
 						icon: '<path d="M3 12a9 9 0 1 0 3-6.7"/><path d="M3 4v6h6"/><path d="M12 7v5l3 2"/>'
 					},
 					{
 						key: "laporan",
 						text: "Laporan",
-						href: "#",
+						href: "laporan",
 						icon: '<path d="M5 20V10"/><path d="M12 20V4"/><path d="M19 20v-7"/>'
 					},
 					{
 						key: "pengaturan",
 						text: "Pengaturan",
-						href: "#",
+						href: "pengaturan",
 						icon: '<path d="M12 15.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7Z"/><path d="m19.4 15 .1.1a2 2 0 1 1-2.8 2.8l-.1-.1a2 2 0 0 0-3.4 1.4V19a2 2 0 1 1-4 0v-.2a2 2 0 0 0-3.4-1.4l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1A2 2 0 0 0 4.5 11H4a2 2 0 1 1 0-4h.2a2 2 0 0 0 1.4-3.4l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1A2 2 0 0 0 11 2.5V2a2 2 0 1 1 4 0v.2a2 2 0 0 0 3.4 1.4l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1A2 2 0 0 0 19.5 10h.2a2 2 0 1 1 0 4h-.2a2 2 0 0 0-1.4 1Z"/>'
 					}
 				]
