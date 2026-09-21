@@ -1,9 +1,6 @@
-<?php if(! $this->session->userdata('email')){
-        redirect('auth');
-}
-?>
     
-<body data-active="dashboard" data-crumbs="Menu | Dashboard">
+<body data-active="dashboard" data-crumbs="Menu | Dashboard"  data-user-name="<?= htmlspecialchars($this->session->userdata('nama'), ENT_QUOTES, 'UTF-8'); ?>"
+>
     <div class="shell">
         <div data-shell-sidebar></div>
         <div class="main">
@@ -19,7 +16,7 @@
                     <div class="hero-text">
                         <span class="eyebrow" id="heroDate">Thursday · April 23 · 2026</span>
                         <h1 class="hero-title">
-                            Welcome back, <span class="accent">John</span>
+                            Welcome back, <span class="accent"><?= $this->session->userdata('nama') ?></span>
                         </h1>
                     </div>
                 </section>

@@ -2,6 +2,17 @@
 
 class Pengeluaran extends CI_Controller
 {
+    public function __construct()
+    {
+        parent::__construct();
+        if (! $this->session->userdata('email')) {
+            $this->session->set_flashdata(
+                'pesan-login',
+                'Anda harus login!'
+            );
+            redirect('auth');
+        }
+    }
     public function index()
     {
         $data['pengeluaran'] = $this->model_pengeluaran->getAllpengeluaran();

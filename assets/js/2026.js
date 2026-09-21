@@ -279,17 +279,20 @@
 						<div class="workspace">
 
 							<div class="workspace-avatar">
-								JD
+								${document.body.getAttribute("data-user-name")
+									? document.body.getAttribute("data-user-name").substring(0, 2).toUpperCase()
+									: "US"}
 							</div>
+
 
 							<div class="workspace-text">
 
 								<div class="workspace-name">
-									John Doe
+									${document.body.getAttribute("data-user-name") || "User"}
 								</div>
 
 								<div class="workspace-role">
-									admin
+									user
 								</div>
 
 							</div>

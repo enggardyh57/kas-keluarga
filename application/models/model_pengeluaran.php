@@ -3,7 +3,9 @@ class model_pengeluaran extends CI_Model
 {
     public function getAllpengeluaran()
     {
+        $user_id = $this->session->userdata('id');
         return $this->db
+            ->where('user_id', $user_id)
             ->order_by('tanggal', 'DESC')
             ->order_by('id', 'DESC')
             ->get('pengeluaran')
@@ -11,12 +13,17 @@ class model_pengeluaran extends CI_Model
     }
     public function tambah_pengeluaran()
     {
+
         $data = [
+            'user_id' => $this->session->userdata('id'),
             'tanggal' => $this->input->post('tanggal'),
             'nominal' => $this->input->post('nominal'),
             'kategori' => $this->input->post('kategori'),
             'keterangan' => $this->input->post('keterangan')
         ];
+        echo '<pre>';
+        print_r($data);
+        exit;
 
         $this->db->insert('pengeluaran', $data);
     }
