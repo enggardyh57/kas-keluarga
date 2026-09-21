@@ -1,6 +1,5 @@
     
-<body data-active="dashboard" data-crumbs="Menu | Dashboard"  data-user-name="<?= htmlspecialchars($this->session->userdata('nama'), ENT_QUOTES, 'UTF-8'); ?>"
->
+<body data-active="dashboard" data-crumbs="Menu | Dashboard"  data-user-name="<?= htmlspecialchars($this->session->userdata('nama'), ENT_QUOTES, 'UTF-8'); ?>">
     <div class="shell">
         <div data-shell-sidebar></div>
         <div class="main">

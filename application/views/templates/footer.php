@@ -1,7 +1,7 @@
   <div data-shell-footer></div>
   </div>
   </div>
-
+<script src="<?= base_url('aseets/js/myscript.js') ?>"></script>
   <script>
       const modalHapus = document.getElementById('modalHapus');
       const konfirmasiHapus = document.getElementById('konfirmasiHapus');
