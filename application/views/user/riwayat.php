@@ -62,9 +62,7 @@
                             <!-- KATEGORI -->
                             <div class="col-lg-4">
 
-                                <select
-                                    name="kategori"
-                                    class="form-select">
+                                <select name="kategori" class="form-select" onchange="this.form.submit()">
 
                                     <option value="">
                                         Semua kategori
@@ -96,9 +94,7 @@
                             <!-- BULAN -->
                             <div class="col-lg-4">
 
-                                <select
-                                    name="bulan"
-                                    class="form-select">
+                                <select name="bulan" class="form-select" onchange="this.form.submit()">
 
                                     <option value="">
                                         Semua bulan
