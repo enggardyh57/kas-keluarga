@@ -21,9 +21,7 @@ class model_pengeluaran extends CI_Model
             'kategori' => $this->input->post('kategori'),
             'keterangan' => $this->input->post('keterangan')
         ];
-        echo '<pre>';
-        print_r($data);
-        exit;
+    
 
         $this->db->insert('pengeluaran', $data);
     }
