@@ -42,6 +42,7 @@ class Anggaran extends CI_Controller
                 (float) $target
             );
         }
+        $this->session->set_flashdata('pesan', 'Anggaran berhasil diperbarui');
 
         redirect('anggaran');
     }

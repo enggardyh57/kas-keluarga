@@ -9,10 +9,12 @@
             <div data-shell-topbar></div>
 
             <?php if ($this->session->flashdata('pesan')) : ?>
-                <div class="alert alert-success m-3">
-                    <i class="fa-solid fa-circle-check me-2"></i>
-                    <?= $this->session->flashdata('pesan'); ?>
+
+                <div class="flash-success">
+                    <i class="fa-solid fa-circle-check"></i>
+                    <span><?= $this->session->flashdata('pesan'); ?></span>
                 </div>
+
             <?php endif; ?>
 
             <main class="content">
