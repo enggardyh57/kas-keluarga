@@ -111,6 +111,7 @@
 
                                     <div class="mb-4">
                                         <h5 class="fw-bold mb-1">
+                                            <i class="fa-solid fa-wallet me-2"></i>
                                             <?= html_escape($item['kategori']); ?>
                                         </h5>
 
