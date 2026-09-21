@@ -101,18 +101,39 @@
 						</button>
 
 
-						<a class="dd-menu-item danger" href="#">
+						<button
+							type="button"
+							class="btn-logout dd-menu-item danger"
+							data-logout>
 							<svg viewBox="0 0 24 24">
 								<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/>
 								<path d="m16 17 5-5-5-5"/>
 								<path d="M21 12H9"/>
 							</svg>
 							Logout
-						</a>
+							</button>
 
 					</div>
 
 				</header>`;
+			}
+
+			function setupLogout() {
+				if (window.__logoutInitialized) return;
+				window.__logoutInitialized = true;
+
+				document.addEventListener("click", function (e) {
+					const btn = e.target.closest("[data-logout]");
+					if (!btn) return;
+
+					e.preventDefault();
+					e.stopPropagation();
+					e.stopImmediatePropagation();
+
+					console.log("LOGOUT CLICK");
+
+					window.location.href = "/kas-keluarga/auth/logout";
+				}, true);
 			}
 
 			function s() {
@@ -1145,7 +1166,7 @@
 			let z = !1;
 
 			function O() {
-				s(), i(), z || (z = !0, document.addEventListener("click", e => {
+				s(), i(), setupLogout(), z || (z = !0, document.addEventListener("click", e => {
 						e.target.closest("[data-palette-open]") && (e.preventDefault(), q())
 					}), document.addEventListener("keydown", e => {
 						if ((e.metaKey || e.ctrlKey) && "k" === e.key) return e.preventDefault(), void(W() ? I() : q());

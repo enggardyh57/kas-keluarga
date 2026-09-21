@@ -24,6 +24,7 @@
     <script defer="defer" src="<?= base_url('assets/js/vendor-chartjs.js') ?>"></script>
     <script defer="defer" src="<?= base_url('assets/js/vendors.js') ?>"></script>
     <script defer="defer" src="<?= base_url('assets/js/2026.js') ?>"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
         rel="stylesheet">

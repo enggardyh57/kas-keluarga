@@ -1,8 +1,19 @@
+<?php if(! $this->session->userdata('email')){
+        redirect('auth');
+}
+?>
+    
 <body data-active="dashboard" data-crumbs="Menu | Dashboard">
     <div class="shell">
         <div data-shell-sidebar></div>
         <div class="main">
             <div data-shell-topbar></div>
+            <?php if ($this->session->flashdata('pesan-success')): ?>
+                <div
+                    id="success-alert"
+                    data-message="<?= html_escape($this->session->flashdata('pesan-success')); ?>">
+                </div>
+            <?php endif; ?>
             <main class="content">
                 <section class="hero">
                     <div class="hero-text">

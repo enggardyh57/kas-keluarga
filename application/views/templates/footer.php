@@ -28,6 +28,39 @@
           }
       });
   </script>
+  <script>
+      document.addEventListener('DOMContentLoaded', function() {
+
+          const errorAlert = document.getElementById('auth-alert');
+
+          if (errorAlert) {
+              Swal.fire({
+                  icon: 'error',
+                  title: 'Login gagal',
+                  text: errorAlert.dataset.message,
+                  confirmButtonText: 'Mengerti',
+                  confirmButtonColor: '#2563eb'
+              });
+          }
+
+          const successAlert = document.getElementById('success-alert');
+
+          if (successAlert) {
+              Swal.fire({
+                  icon: 'success',
+                  title: 'Berhasil!',
+                  text: successAlert.dataset.message,
+                  confirmButtonText: 'Lanjut',
+                  confirmButtonColor: '#2563eb'
+              });
+          }
+
+      });
+  </script>
+</body>
+</html>
+
+  
   </body>
 
 
