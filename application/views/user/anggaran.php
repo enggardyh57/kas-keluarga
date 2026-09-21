@@ -31,31 +31,64 @@
                 </div>
 
                 <!-- FILTER -->
-                <div class="d-flex gap-2 mb-4">
+                <!-- FILTER -->
+                <form
+                    method="get"
+                    action="<?= site_url('anggaran'); ?>"
+                    class="d-flex gap-2 mb-4">
 
-                    <select class="form-select w-auto">
-                        <option>Januari</option>
-                        <option>Februari</option>
-                        <option>Maret</option>
-                        <option>April</option>
-                        <option>Mei</option>
-                        <option>Juni</option>
-                        <option>Juli</option>
-                        <option>Agustus</option>
-                        <option selected>September</option>
-                        <option>Oktober</option>
-                        <option>November</option>
-                        <option>Desember</option>
+                    <select
+                        name="bulan"
+                        class="form-select w-auto"
+                        onchange="this.form.submit()">
+
+                        <?php
+                        $nama_bulan = [
+                            1  => 'Januari',
+                            2  => 'Februari',
+                            3  => 'Maret',
+                            4  => 'April',
+                            5  => 'Mei',
+                            6  => 'Juni',
+                            7  => 'Juli',
+                            8  => 'Agustus',
+                            9  => 'September',
+                            10 => 'Oktober',
+                            11 => 'November',
+                            12 => 'Desember'
+                        ];
+                        ?>
+
+                        <?php foreach ($nama_bulan as $nomor => $nama) : ?>
+
+                            <option
+                                value="<?= $nomor; ?>"
+                                <?= ((int) $bulan === $nomor) ? 'selected' : ''; ?>>
+                                <?= $nama; ?>
+                            </option>
+
+                        <?php endforeach; ?>
+
                     </select>
 
-                    <select class="form-select w-auto">
-                        <option selected>2026</option>
-                        <option>2027</option>
-                        <option>2028</option>
+                    <select
+                        name="tahun"
+                        class="form-select w-auto"
+                        onchange="this.form.submit()">
+
+                        <?php for ($tahun_option = 2026; $tahun_option <= 2028; $tahun_option++) : ?>
+
+                            <option
+                                value="<?= $tahun_option; ?>"
+                                <?= ((int) $tahun === $tahun_option) ? 'selected' : ''; ?>>
+                                <?= $tahun_option; ?>
+                            </option>
+
+                        <?php endfor; ?>
+
                     </select>
 
-                </div>
-
+                </form>
                 <!-- ANGGARAN -->
                 <div class="row g-3">
 
@@ -92,6 +125,15 @@
                                             type="hidden"
                                             name="kategori"
                                             value="<?= html_escape($item['kategori']); ?>">
+                                        <input
+                                            type="hidden"
+                                            name="bulan"
+                                            value="<?= $bulan; ?>">
+
+                                        <input
+                                            type="hidden"
+                                            name="tahun"
+                                            value="<?= $tahun; ?>">
 
                                         <label class="form-label fw-bold">
                                             Target Anggaran

@@ -16,10 +16,22 @@ class Anggaran extends CI_Controller
     public function index()
     {
         $user_id = $this->session->userdata('id');
+        $bulan = $this->input->get('bulan');
+        $tahun = $this->input->get('tahun');
+
+        $bulan = $bulan ? (int) $bulan : (int) date('n');
+        $tahun = $tahun ? (int) $tahun : (int) date('Y');
+
+        if ($bulan < 1 || $bulan > 12) {
+            $bulan = (int) date('n');
+        }
+
 
         $data['saldo'] = $this->model_anggaran->get_saldo_awal($user_id);
 
-        $data['anggaran'] = $this->model_anggaran->get_data_anggaran($user_id);
+        $data['anggaran'] = $this->model_anggaran->get_data_anggaran($user_id, $bulan, $tahun);
+        $data['bulan'] = $bulan;
+        $data['tahun'] = $tahun;
 
         $this->load->view('templates/header');
         $this->load->view('user/anggaran', $data);
@@ -31,6 +43,9 @@ class Anggaran extends CI_Controller
 
         $kategori = $this->input->post('kategori');
         $target = $this->input->post('target');
+        $bulan = (int) $this->input->post('bulan');
+        $tahun = (int) $this->input->post('tahun');
+
 
         $target = preg_replace('/[^0-9]/', '', $target);
 
@@ -39,11 +54,13 @@ class Anggaran extends CI_Controller
             $this->model_anggaran->simpan_anggaran(
                 $user_id,
                 $kategori,
-                (float) $target
+                (float) $target,
+                $bulan,
+                $tahun
             );
         }
         $this->session->set_flashdata('pesan', 'Anggaran berhasil diperbarui');
 
-        redirect('anggaran');
+        redirect('anggaran?bulan=' . $bulan . '&tahun=' . $tahun);
     }
 }

@@ -18,12 +18,14 @@ class model_anggaran extends CI_Model
             ->row();
     }
 
-    public function get_target_anggaran($user_id, $kategori)
+    public function get_target_anggaran($user_id, $kategori, $bulan, $tahun)
     {
         $result = $this->db
             ->select('target_nominal')
             ->where('user_id', $user_id)
             ->where('kategori', $kategori)
+            ->where('bulan', $bulan)
+            ->where('tahun', $tahun)
             ->order_by('tahun', 'DESC')
             ->order_by('bulan', 'DESC')
             ->get('anggaran_bulanan')
@@ -32,12 +34,14 @@ class model_anggaran extends CI_Model
         return $result ? (float) $result->target_nominal : 0;
     }
 
-    public function get_realisasi($user_id, $kategori)
+    public function get_realisasi($user_id, $kategori, $bulan, $tahun)
     {
         $result = $this->db
             ->select_sum('nominal', 'total')
             ->where('user_id', $user_id)
             ->where('kategori', $kategori)
+            ->where('MONTH(tanggal)', $bulan) // TAMBAH
+            ->where('YEAR(tanggal)', $tahun)
             ->get('pengeluaran')
             ->row();
 
@@ -46,7 +50,7 @@ class model_anggaran extends CI_Model
             : 0;
     }
 
-    public function get_data_anggaran($user_id)
+    public function get_data_anggaran($user_id, $bulan, $tahun)
     {
         $data = [];
 
@@ -54,12 +58,16 @@ class model_anggaran extends CI_Model
 
             $target = $this->get_target_anggaran(
                 $user_id,
-                $kategori
+                $kategori,
+                $bulan,
+                $tahun
             );
 
             $realisasi = $this->get_realisasi(
                 $user_id,
-                $kategori
+                $kategori,
+                $bulan,
+                $tahun
             );
 
             $persentase = $target > 0
@@ -79,10 +87,8 @@ class model_anggaran extends CI_Model
 
         return $data;
     }
-    public function simpan_anggaran($user_id, $kategori, $target)
+    public function simpan_anggaran($user_id, $kategori, $target, $bulan, $tahun)
     {
-        $bulan = date('n');
-        $tahun = date('Y');
 
         $cek = $this->db
             ->where('user_id', $user_id)
