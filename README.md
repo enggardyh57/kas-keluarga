@@ -191,59 +191,6 @@ Aplikasi menggunakan **MySQL** sebagai database untuk menyimpan data:
 * Anggaran
 * Riwayat transaksi
 
----
-
-## 🚀 Installation
-
-### 1. Clone Repository
-
-```bash
-git clone https://github.com/username/kas-keluarga.git
-```
-
-### 2. Masuk ke Folder Project
-
-```bash
-cd kas-keluarga
-```
-
-### 3. Konfigurasi Database
-
-Buat database MySQL kemudian sesuaikan konfigurasi database pada:
-
-```text
-application/config/database.php
-```
-
-### 4. Konfigurasi Base URL
-
-Sesuaikan URL aplikasi pada:
-
-```text
-application/config/config.php
-```
-
-Contoh:
-
-```php
-$config['base_url'] = 'http://localhost/kas-keluarga/';
-```
-
-### 5. Jalankan Project
-
-Letakkan project pada folder server lokal seperti:
-
-```text
-htdocs/kas-keluarga
-```
-
-Kemudian jalankan melalui browser:
-
-```text
-http://localhost/kas-keluarga/
-```
-
----
 
 ## 📌 Project Information
 
