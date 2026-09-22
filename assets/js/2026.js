@@ -132,7 +132,7 @@
 
 					console.log("LOGOUT CLICK");
 
-					window.location.href = "/kas-keluarga/auth/logout";
+					window.location.href = new URL("auth/logout", window.location.origin + window.location.pathname.substring(0, window.location.pathname.lastIndexOf("/") + 1)).href;
 				}, true);
 			}
 
