@@ -1,8 +1,14 @@
-<body data-active="laporan" data-crumbs="Menu | Laporan">
+<body data-active="laporan" data-crumbs="Menu | Laporan" data-user-name="<?= htmlspecialchars($this->session->userdata('nama'), ENT_QUOTES, 'UTF-8'); ?>">
 
     <div class="shell">
 
         <div data-shell-sidebar></div>
+        <?php if ($this->session->flashdata('pesan-success')): ?>
+            <div
+                id="success-alert"
+                data-message="<?= html_escape($this->session->flashdata('pesan-success')); ?>">
+            </div>
+        <?php endif; ?>
 
         <div class="main">
 
@@ -200,80 +206,80 @@
 
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-<script>
-    const ctx = document.getElementById('laporanChart');
+    <script>
+        const ctx = document.getElementById('laporanChart');
 
-    new Chart(ctx, {
-        type: 'bar',
-        data: {
-            labels: [
-                'Belanja Rumah',
-                'Saku Bintang',
-                'Saku Keysia'
-            ],
-            datasets: [{
-                label: 'Pengeluaran',
-                data: [
-                    <?= $laporan['kategori']['Belanja Rumah']; ?>,
-                    <?= $laporan['kategori']['Saku Bintang']; ?>,
-                    <?= $laporan['kategori']['Saku Keysia']; ?>
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: [
+                    'Belanja Rumah',
+                    'Saku Bintang',
+                    'Saku Keysia'
                 ],
-                borderRadius: 8,
-                borderSkipped: false,
-                barThickness: 55
-            }]
-        },
-        options: {
-            responsive: true,
-            maintainAspectRatio: false,
-
-            plugins: {
-                legend: {
-                    display: false
-                },
-
-                tooltip: {
-                    callbacks: {
-                        label: function(context) {
-                            return 'Rp ' + new Intl.NumberFormat('id-ID').format(context.raw);
-                        }
-                    }
-                }
+                datasets: [{
+                    label: 'Pengeluaran',
+                    data: [
+                        <?= $laporan['kategori']['Belanja Rumah']; ?>,
+                        <?= $laporan['kategori']['Saku Bintang']; ?>,
+                        <?= $laporan['kategori']['Saku Keysia']; ?>
+                    ],
+                    borderRadius: 8,
+                    borderSkipped: false,
+                    barThickness: 55
+                }]
             },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
 
-            scales: {
-                x: {
-                    grid: {
+                plugins: {
+                    legend: {
                         display: false
                     },
-                    ticks: {
-                        font: {
-                            size: 13
+
+                    tooltip: {
+                        callbacks: {
+                            label: function(context) {
+                                return 'Rp ' + new Intl.NumberFormat('id-ID').format(context.raw);
+                            }
                         }
                     }
                 },
 
-                y: {
-                    beginAtZero: true,
-                    grid: {
-                        color: 'rgba(0, 0, 0, 0.06)'
+                scales: {
+                    x: {
+                        grid: {
+                            display: false
+                        },
+                        ticks: {
+                            font: {
+                                size: 13
+                            }
+                        }
                     },
-                    border: {
-                        display: false
-                    },
-                    ticks: {
-                        padding: 8,
-                        callback: function(value) {
-                            return 'Rp ' + new Intl.NumberFormat('id-ID', {
-                                notation: 'compact',
-                                maximumFractionDigits: 1
-                            }).format(value);
+
+                    y: {
+                        beginAtZero: true,
+                        grid: {
+                            color: 'rgba(0, 0, 0, 0.06)'
+                        },
+                        border: {
+                            display: false
+                        },
+                        ticks: {
+                            padding: 8,
+                            callback: function(value) {
+                                return 'Rp ' + new Intl.NumberFormat('id-ID', {
+                                    notation: 'compact',
+                                    maximumFractionDigits: 1
+                                }).format(value);
+                            }
                         }
                     }
                 }
             }
-        }
-    });
-</script>
+        });
+    </script>
 
 </body>

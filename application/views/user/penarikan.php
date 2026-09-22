@@ -1,6 +1,12 @@
-<body data-active="penarikan" data-crumbs="Menu | Penarikan">
+<body data-active="penarikan" data-crumbs="Menu | Penarikan" data-user-name="<?= htmlspecialchars($this->session->userdata('nama'), ENT_QUOTES, 'UTF-8'); ?>">
     <div class="shell">
         <div data-shell-sidebar></div>
+        <?php if ($this->session->flashdata('pesan-success')): ?>
+            <div
+                id="success-alert"
+                data-message="<?= html_escape($this->session->flashdata('pesan-success')); ?>">
+            </div>
+        <?php endif; ?>
         <div class="main">
             <div data-shell-topbar></div>
             <?php if ($this->session->flashdata('pesan')) : ?>
@@ -85,7 +91,7 @@
                 <div class="row mt-3">
                     <div class="card">
                         <div class="card-body">
-                            
+
                             <table class="table">
                                 <thead>
                                     <tr>

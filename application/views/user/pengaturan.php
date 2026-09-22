@@ -1,7 +1,13 @@
-<body data-active="pengaturan" data-crumbs="Menu | Pengaturan">
+<body data-active="pengaturan" data-crumbs="Menu | Pengaturan" data-user-name="<?= htmlspecialchars($this->session->userdata('nama'), ENT_QUOTES, 'UTF-8'); ?>">
     <div class="shell">
 
         <div data-shell-sidebar></div>
+        <?php if ($this->session->flashdata('pesan-success')): ?>
+            <div
+                id="success-alert"
+                data-message="<?= html_escape($this->session->flashdata('pesan-success')); ?>">
+            </div>
+        <?php endif; ?>
 
         <div class="main">
 
@@ -52,8 +58,7 @@
 
                                             <label
                                                 for="saldo_atm"
-                                                class="form-label fw-bold"
-                                            >
+                                                class="form-label fw-bold">
                                                 Saldo Awal ATM
                                             </label>
 
@@ -64,14 +69,13 @@
                                                 name="saldo_atm"
                                                 placeholder="Rp 0"
                                                 value="<?= isset($pengaturan)
-                                                    ? 'Rp ' . number_format(
-                                                        $pengaturan['saldo_awal_atm'],
-                                                        0,
-                                                        ',',
-                                                        '.'
-                                                    )
-                                                    : set_value('saldo_atm') ?>"
-                                            >
+                                                            ? 'Rp ' . number_format(
+                                                                $pengaturan['saldo_awal_atm'],
+                                                                0,
+                                                                ',',
+                                                                '.'
+                                                            )
+                                                            : set_value('saldo_atm') ?>">
 
                                             <?php
                                             echo form_error(
@@ -94,8 +98,7 @@
 
                                             <label
                                                 for="saldo_tunai"
-                                                class="form-label fw-bold"
-                                            >
+                                                class="form-label fw-bold">
                                                 Saldo Awal Tunai
                                             </label>
 
@@ -106,14 +109,13 @@
                                                 name="saldo_tunai"
                                                 placeholder="Rp 0"
                                                 value="<?= isset($pengaturan)
-                                                    ? 'Rp ' . number_format(
-                                                        $pengaturan['saldo_awal_tunai'],
-                                                        0,
-                                                        ',',
-                                                        '.'
-                                                    )
-                                                    : set_value('saldo_tunai') ?>"
-                                            >
+                                                            ? 'Rp ' . number_format(
+                                                                $pengaturan['saldo_awal_tunai'],
+                                                                0,
+                                                                ',',
+                                                                '.'
+                                                            )
+                                                            : set_value('saldo_tunai') ?>">
 
                                             <?php
                                             echo form_error(
@@ -153,8 +155,7 @@
                                 <div class="mt-3">
                                     <button
                                         type="submit"
-                                        class="btn btn-primary"
-                                    >
+                                        class="btn btn-primary">
                                         <i class="fa-solid fa-floppy-disk me-1"></i>
                                         Simpan Pengaturan
                                     </button>

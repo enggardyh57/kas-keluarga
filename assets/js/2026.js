@@ -332,32 +332,20 @@
 				// =========================
 				i && (
 					i.outerHTML = `
-			<footer class="d-footer">
+			<footer class="d-footer" style="justify-content: center;">
 
-				<div>
-					© 2026 · Designed by
-					<a
-						href="https://colorlib.com"
-						target="_blank"
-						rel="nofollow noopener noreferrer"
-					>
-						Colorlib
-					</a>
-				</div>
+			<div style="text-align: center;">
+				© 2026 · Designed by
+				<a
+					href="https://colorlib.com"
+					target="_blank"
+					rel="nofollow noopener noreferrer"
+				>
+					Kas Keluarga Ceria
+				</a>
+			</div>
 
-				<div class="d-footer-meta">
-
-					<span>
-						v4.1.2
-					</span>
-
-					<span>
-						preview build
-					</span>
-
-				</div>
-
-			</footer>
+		</footer>
 		`
 				);
 			}

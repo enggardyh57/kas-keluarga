@@ -1,8 +1,14 @@
-<body data-active="riwayat" data-crumbs="Menu | Riwayat">
+<body data-active="riwayat" data-crumbs="Menu | Riwayat" data-user-name="<?= htmlspecialchars($this->session->userdata('nama'), ENT_QUOTES, 'UTF-8'); ?>">
 
     <div class="shell">
 
         <div data-shell-sidebar></div>
+        <?php if ($this->session->flashdata('pesan-success')): ?>
+            <div
+                id="success-alert"
+                data-message="<?= html_escape($this->session->flashdata('pesan-success')); ?>">
+            </div>
+        <?php endif; ?>
 
         <div class="main">
 
