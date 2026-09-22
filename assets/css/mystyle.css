@@ -165,6 +165,26 @@
     color: var(--t-base);
 }
 
+.card .text-muted {
+    color: var(--t-muted) !important;
+}
+
+.card .fw-bold {
+    color: var(--t-base);
+}
+
+.card .text-danger {
+    color: var(--danger) !important;
+}
+
+.card .text-warning {
+    color: var(--warning) !important;
+}
+
+.card .text-success {
+    color: var(--success) !important;
+}
+
 .table {
     --bs-table-bg: var(--bg-card);
     --bs-table-color: var(--t-base);
